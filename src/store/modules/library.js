@@ -32,17 +32,18 @@ const getters = {
 
 const actions = {
   addBook: ({ commit }, newBook) => {
-    commit('commitBook', newBook);
+    commit("commitBook", newBook);
   },
 
   deleteBook: ({ commit }, id) => {
-    commit('commitDelete', id);
+    commit("commitDelete", id);
   }
 };
 
 const mutations = {
   commitBook: (state, newBook) => state.library.push(newBook),
-  commitDelete: (state, id) => state.library = state.library.filter(book => book.id !== id)
+  commitDelete: (state, id) =>
+    (state.library = state.library.filter(book => book.id !== id))
 };
 
 export default {

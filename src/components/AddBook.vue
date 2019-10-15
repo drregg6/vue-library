@@ -68,4 +68,10 @@ export default {
   input[type="submit"]:hover {
     background: #a3a3a3;
   }
+
+  @media (max-width: 500px) {
+    form {
+      flex-direction: column;
+    }
+  }
 </style>
