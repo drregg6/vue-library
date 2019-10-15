@@ -37,13 +37,25 @@ const actions = {
 
   deleteBook: ({ commit }, id) => {
     commit("commitDelete", id);
+  },
+
+  updateBook: ({ commit }, updatedBookId) => {
+    commit("commitUpdate", updatedBookId);
   }
 };
 
 const mutations = {
   commitBook: (state, newBook) => state.library.push(newBook),
   commitDelete: (state, id) =>
-    (state.library = state.library.filter(book => book.id !== id))
+    (state.library = state.library.filter(book => book.id !== id)),
+  commitUpdate: (state, updatedBook) => {
+    // Get book index
+    const index = state.library.findIndex(book => book.id === updatedBook.id);
+
+    if (index !== -1) {
+      state.library.splice(index, 1, updatedBook);
+    }
+  }
 };
 
 export default {
