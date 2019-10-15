@@ -1,25 +1,11 @@
 const state = {
   library: [
     {
-      id: 128731,
-      title: "Book of Dust",
-      author: "Pullman",
+      id: 1,
+      title: "Example Book",
+      author: "Dave Regg",
       isRead: false,
-      pages: "478"
-    },
-    {
-      id: 129891,
-      title: "The Subtle Knife",
-      author: "Pullman",
-      isRead: false,
-      pages: "389"
-    },
-    {
-      id: 123091,
-      title: "The Golden Compass",
-      author: "Pullman",
-      isRead: true,
-      pages: "312"
+      pages: "0"
     }
   ]
 };
@@ -46,8 +32,12 @@ const actions = {
 
 const mutations = {
   commitBook: (state, newBook) => state.library.push(newBook),
-  commitDelete: (state, id) =>
-    (state.library = state.library.filter(book => book.id !== id)),
+  commitDelete: (state, id) => {
+    if (id === 1) {
+      return;
+    }
+    state.library = state.library.filter(book => book.id !== id);
+  },
   commitUpdate: (state, updatedBook) => {
     // Get book index
     const index = state.library.findIndex(book => book.id === updatedBook.id);
