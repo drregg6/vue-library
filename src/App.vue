@@ -3,10 +3,6 @@
 === TODO ===
 - Data should persist in browser
     localStorage
-- Update Book on double-click
-    different way to tell that it's been read
-    circle with a different color?
-- fontawesome
 
 */
 

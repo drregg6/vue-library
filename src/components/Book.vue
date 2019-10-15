@@ -6,7 +6,7 @@
     <div class="buttons">
       <span class="read" v-bind:class="{'is-read':book.isRead}" v-on:click="onClick(book)">
       </span>
-      <span class="delete">
+      <span class="delete" v-on:click="deleteBook(book.id)">
         X
       </span>
     </div>
