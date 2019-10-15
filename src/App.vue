@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <div class="container">
+      <AddBook />
       <Library />
     </div>
   </div>
 </template>
 
 <script>
+import AddBook from './components/AddBook';
 import Library from './components/Library';
 
 export default {
   name: "App",
   components: {
+    AddBook,
     Library
   }
 }
