@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
+      <Header />
       <AddBook />
       <Library />
     </div>
@@ -8,12 +9,14 @@
 </template>
 
 <script>
+import Header from './components/layout/Header';
 import AddBook from './components/AddBook';
 import Library from './components/Library';
 
 export default {
   name: "App",
   components: {
+    Header,
     AddBook,
     Library
   }

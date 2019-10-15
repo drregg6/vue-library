@@ -50,10 +50,22 @@ export default {
     display: flex;
   }
 
-  input {
+  input[type="text"] {
     flex: 4;
+    outline: 0;
+    padding: 5px;
+
+    border: 1px solid black;
   }
   input[type="submit"] {
     flex: 2;
+    background: #3a3a3a;
+    color: #fff;
+
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background: #a3a3a3;
   }
 </style>
