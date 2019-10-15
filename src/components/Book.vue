@@ -95,8 +95,12 @@ export default {
   @media (max-width: 500px) {
     .book {
       font-size: .8rem;
-
-      align-items: center;
+      flex-wrap: wrap;
+    }
+    h1 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: .5rem;
     }
   }
 </style>

@@ -15,7 +15,7 @@ export default {
 <style scoped>
   header {
     text-align: center;
-    margin: 1rem auto;
+    margin: 0 auto 1rem auto;
     padding: 2rem 0;
 
     border-bottom: 5px solid red;
