@@ -1,3 +1,13 @@
+/*
+
+=== TODO ===
+- Data should persist in browser
+    localStorage
+- Update Book on double-click
+- fontawesome
+
+*/
+
 <template>
   <div id="app">
     <div class="container">

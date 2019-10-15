@@ -2,7 +2,7 @@
   <div class="book" v-bind:class="{'is-read':book.isRead}">
     <h1>{{ book.title }}</h1>
     <p class="author">{{ book.author }}</p>
-    <p class="pages">{{ book.pages }}</p>
+    <p class="pages">pg. {{ book.pages }}</p>
     <div class="delete">
       x
     </div>
@@ -28,6 +28,7 @@ export default {
   }
 
   h1 {
+    font-weight: bold;
     flex: 5;
   }
   .author {
@@ -45,5 +46,13 @@ export default {
 
   .is-read {
     background: yellow;
+  }
+
+  @media (max-width: 500px) {
+    .book {
+      font-size: .8rem;
+
+      align-items: center;
+    }
   }
 </style>
