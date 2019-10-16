@@ -1,8 +1,6 @@
 <template>
-  <div class="content">
-    <div :key="book.id" v-for="book in getLibrary" class="library">
-      <Book v-bind:book="book" />
-    </div>
+  <div class="library">
+    <Book v-bind:book="book" :key="book.id" v-for="book in getLibrary" />
   </div>
 </template>
 
@@ -20,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-  .library:nth-child(even) {
-    background: #f3f3f3;
+  .library {
+    margin: 2.5rem auto;
   }
 </style>

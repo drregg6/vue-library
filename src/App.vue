@@ -1,8 +1,6 @@
 /*
 
 === TODO ===
-- Data should persist in browser
-    localStorage
 
 */
 
@@ -12,6 +10,7 @@
       <Header />
       <AddBook />
       <Library />
+      <Footer />
     </div>
   </div>
 </template>
@@ -20,13 +19,15 @@
 import Header from './components/layout/Header';
 import AddBook from './components/AddBook';
 import Library from './components/Library';
+import Footer from './components/layout/Footer';
 
 export default {
   name: "App",
   components: {
     Header,
     AddBook,
-    Library
+    Library,
+    Footer
   }
 }
 </script>

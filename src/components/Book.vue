@@ -43,6 +43,9 @@ export default {
 
     padding: 1rem;
   }
+  .book:nth-child(even) {
+    background: #f3f3f3;
+  }
 
   h1 {
     font-weight: bold;
